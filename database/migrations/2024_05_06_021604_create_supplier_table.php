@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('branch', function (Blueprint $table) {
-            $table->id();
+        Schema::create('supplier', function (Blueprint $table) {
+            $table->id('supplier_id');
+            $table->string('supplier_name')->nullable();
+            $table->string('contact_info')->nullable(); // Corrected column name
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('branch');
+        Schema::dropIfExists('supplier');
     }
 };
