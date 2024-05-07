@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/medicines', [MedicinesController::class, 'index']);
+Route::get('/medicines/{id}', [MedicinesController::class, 'show']);
 // Route::get('/user', [UserController::class, 'index']);

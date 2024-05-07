@@ -37,7 +37,7 @@ class MedicinesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return Medicines::findOrFail($id);
     }
 
     /**
